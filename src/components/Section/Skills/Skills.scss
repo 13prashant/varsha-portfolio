@@ -1,4 +1,6 @@
-#skills {
+@import '../../../../variables';
+
+.skills {
   p {
     text-align: center;
   }
@@ -7,69 +9,65 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0% 9%;
     flex-wrap: wrap;
-
+    gap: 2rem;
 
     .skill-img {
-      box-shadow: 10px 10px 14px -19px #af2574, -6px -6px 10px #af2575;
+      box-shadow: 10px 10px 14px -19px $primaryBg, -6px -6px 10px $primaryBg;
       padding: 10px 50px;
       border-radius: 10px;
-      margin: 20px 17px;
-      .img-text {        
-        
-      img {
-        width: 55px;
-        height: 77px;
-      }
-     
+      .img-text {
+        img {
+          width: 55px;
+          height: 77px;
+        }
       }
       .img-text:hover {
         transform: scale(1.08);
       }
-
-      
-
     }
 
     p {
       display: none;
       position: absolute;
       border-width: 5px;
-      background-color: #AF2575;
+      background-color: $primaryBg;
       color: #ffffff;
       padding: 5px 0;
       border-style: solid;
       border-radius: 10px;
-      border-color: #AF2575;
+      border-color: $primaryBg;
     }
   }
 
-  img:hover+p {
+  img:hover + p {
     display: block;
   }
 
   .service {
+    margin-top: 3.125rem;
+
     p {
       text-align: center;
     }
 
     .service-containers {
-      display: flex;
-      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      justify-items: center;
+      gap: 2rem;
 
       .service-container {
-        width: 40%;
-        background: #118ba9;
+        width: 100%;
+        background: $accentColor;
         color: #ffffff;
         border-radius: 0 0 16px 16px;
-        margin-left: 6.5%;
-        border: 1px solid #AF2575;
+        border: 1px solid $primaryBg;
 
         .service__head {
           color: #ffffff;
           text-align: center;
-          background: #AF2575;
+          background: $primaryBg;
           border-radius: 0 0 1rem 1rem;
           padding-top: 0.5%;
         }
@@ -79,40 +77,17 @@
 
           .service__list-icon {
             display: flex;
+            align-items: center;
             gap: 7px;
-            margin-bottom: 14px;
+            margin-bottom: 1rem;
 
             .description {
-
               text-align: left;
+              margin: 0;
             }
           }
-
         }
-
       }
-
     }
-
   }
-}
-
-@media screen and (max-width: 1024px) {
-  .service-containers {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .service {
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .service-containers {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-
 }
