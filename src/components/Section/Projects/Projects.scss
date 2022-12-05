@@ -1,46 +1,43 @@
-#projects{
-    padding-top: 25px;
-    p{
-      text-align: center;
-      color: #118ba9;
-      font-size: medium;
-    }
+@import '../../../../variables';
+
+.projects {
+  p {
+    text-align: center;
+    color: $accentColor;
+    font-size: medium;
+  }
 }
 
 #project-card {
- 
   background-clip: border-box;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  box-shadow: 0px 0px 0px #af2577, -4px 5px 10px #af2577;
-  margin-left: 41px;
+  align-items: center;
+  max-width: 20rem;
+  box-shadow: 0px 0px 0px $primaryBg, -4px 5px 10px $primaryBg;
   padding: 20px;
   .img-div {
-    .project-image{
+    .project-image {
       width: 100%;
-      
     }
-    .project-image:hover{
+    .project-image:hover {
       transform: scale(1.04);
     }
   }
 
-.project-card-header {
-
-  a{
-    display: flex;
-    text-decoration: none;
-    color: #AF2575;
+  .project-card-header {
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $primaryBg;
+    }
+    .right-arrow-up {
+      width: 11px;
+      margin-left: 6px;
+    }
   }
-  .right-arrow-up {
-    width: 11px;
-    margin-left: 6px;
-  }
-
-}
-
 }
 
 .projectsViewAll {
@@ -51,11 +48,10 @@
   justify-content: flex-end;
   margin-top: 32px;
 
- a {
-  text-decoration: none;
- }
- .js15 {
-   
+  a {
+    text-decoration: none;
+  }
+  .js15 {
     border: none;
     width: 140px;
     height: 45px;
@@ -71,9 +67,8 @@
     cursor: pointer;
     color: #eaeaea;
     transition: color 0.2s;
-    background-color: #AF2574;
-
-  }  
+    background-color: $primaryBg;
+  }
   .js16 {
     color: #eaeaea;
     width: 35px;
@@ -83,10 +78,12 @@
     margin-right: 5px;
     transition: background-color 0.2s;
     border-radius: 50%;
-    background-color: #118ba9;
+    background-color: $accentColor;
   }
 }
 .subProject {
   display: flex;
-  margin: 20px 107px 0px 95px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
